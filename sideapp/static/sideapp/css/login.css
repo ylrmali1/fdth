@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    height: 100vh;
+}
+
+.logo{
+    width: 60%;
+}
+
+.input{
+    width: 100%;
+    border: 0;
+    border-bottom: 3px solid black;
+    background-color: white;
+    height: 50px;
+    text-align: center;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.submitBtn{
+    width: 50%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 3px 3px 0 black;
+}
+
+@media screen and (max-width: 600px){
+    .col-md-3{
+        width: 90%;
+    }
+}

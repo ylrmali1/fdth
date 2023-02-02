@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={% static 'sideapp/css/main.css' %}>
+    <link rel="stylesheet" href={% static 'sideapp/css/login.css' %}>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container d-flex content-center align-items-center">
+        <div class="col-md-3 d-flex fd-column align-items-center">
+            <img class="logo mb-3" src={% static 'sideapp/img/logo.png' %} alt="">
+            <input placeholder='Kullanıcı adı' type="text" id="userName" class="input  mb-3">
+            <input placeholder='Şifre' type="password" id="password" class="input mb-3">
+            <button class="submitBtn mb-3" type="submit">Giriş Yap</button>
+            <hr>
+            <p class="forgetPassword mb-3"><a href="#">Şifremi Unuttum</a></p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+
+.o-card{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 30px;
+    width: fit-content;
+    margin: 0 auto ;
+}
+
+.i-card{
+    border: 2px solid darkgrey;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.p-30{
+    padding: 30px;
+}
+
+#photo{
+    width: 100%;
+}
+
+.inpt{
+    width: 100%;
+    outline: 1px solid black!important;
+}
+
+.rowOCR{
+    display: flex;
+}
+
+
+#ocrIcon{
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+
+
+#screenshot {
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    object-fit: contain;
+
+}
+
+#draw{
+    display: none;
+}
+
+#draw.active{
+  display: block;
+  position:absolute;
+  z-index:2;
+  pointer-events:none;
+}
+
+#draw.active #boxes{
+  fill:yellow;
+  stroke:darkblue;
+  stroke-width:1;
+  fill-opacity:0.3;
+  stroke-opacity:0.9;
+}
+#draw.active #marquee{
+  fill:white;
+  stroke:red;
+  stroke-width:1;
+  stroke-dasharray:5,5;
+  stroke-opacity:0.9;
+  fill-opacity:0.2;
+}
+#draw #marquee.hide {
+  display:none;
+}
+
+@media screen and (max-width: 1000px){
+    .rowOCR{
+        flex-direction: column;
+    }
+
+
+    .col-md-5{
+        width: 100%;
+    }
+
+}
+
+

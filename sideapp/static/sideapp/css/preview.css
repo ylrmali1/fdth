@@ -1,0 +1,22 @@
+#image{
+    width: 100%;
+    border-radius: 30px;
+}
+
+#tabs{
+    top: 5px;
+    left: 30px;
+}
+
+#tabs button{
+    width: 120px;
+    background-color: cornflowerblue;
+    color: white;
+    border: 2px solid darkblue;
+}
+
+#tabs button:hover{
+    background-color: white;
+    color: cornflowerblue;
+    border-color: cornflowerblue;
+}

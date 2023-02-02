@@ -1,0 +1,32 @@
+
+i{
+    font-size: 20px;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+label{
+    width: 100%;
+}
+
+input[type='text']{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+
+input[type='text']:focus{
+    outline: none;
+}
+
+#title{
+    text-transform: capitalize;
+}
+
+#docPhoto{
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+}
