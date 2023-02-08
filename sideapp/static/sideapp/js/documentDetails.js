@@ -9,7 +9,7 @@ console.log(field);
 
 // localden documents i aldık ve gecerli datayı bılmak ıcın fieldden gelen id ye gore filtrelerdik.
 let datas = JSON.parse(localStorage.getItem('documents'));
-let currentData = datas[field-1];   //indexleme 0 dan baslıyor ama biz id mizi 1 den baslattık.
+let currentData = datas[field];
 console.log(currentData);
 
 // data icindeki bilgileri tanımladık
@@ -21,7 +21,7 @@ const title = document.getElementById('title');
 const lbl = document.getElementById('docName');
 const docPhoto = document.getElementById('docPhoto');
 
-title.innerText = `${documentName} Belgesi Tanımlama Ekranı`;
+title.innerText = `${documentName} Belgesi Detayları`;
 lbl.setAttribute('value',documentName);
 docPhoto.setAttribute('src',documentUrl);
 

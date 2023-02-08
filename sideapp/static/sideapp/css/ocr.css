@@ -1,16 +1,18 @@
 
 
 .o-card{
-    border: 2px solid black;
-    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    border-radius: 30px;
     padding: 30px;
     width: fit-content;
     margin: 0 auto ;
+    box-shadow: 3px 3px 20px grey;
 }
 
 .i-card{
-    border: 2px solid darkgrey;
-    border-radius: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.31);
+    border-radius: 10px;
+    background-color: white;
     text-align: center;
 }
 
@@ -22,9 +24,17 @@
     width: 100%;
 }
 
+label{
+    font-family: 'Antonio', sans-serif;
+    color: #313D47;
+}
+
 .inpt{
     width: 100%;
-    outline: 1px solid black!important;
+    border-radius: 30px;
+    border: 1px dashed black;
+    padding: 5px;
+    text-align: center;
 }
 
 .rowOCR{
@@ -38,6 +48,7 @@
     border-radius: 5px;
 }
 
+.col-md-5{width: 100% }
 
 
 

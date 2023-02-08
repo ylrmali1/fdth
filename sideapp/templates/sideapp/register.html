@@ -1,0 +1,44 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={% static 'sideapp/css/main.css' %}>
+    <link rel="stylesheet" href={% static 'sideapp/css/login.css' %}>
+    <link rel="stylesheet" href={% static 'sideapp/css/register.css' %}>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container d-flex content-center align-items-center p-relative mt-5">
+        <div class="col-md-6 d-flex fd-column align-items-center">
+            <div class="card p-5" id="card">
+                <div class="alert" id="error">
+                    <p>Bu emaile ait bir hesap zaten mevcut!</p>
+                </div>
+                <div class="success" id="success">
+                    <p>Kaydınız başarıyla oluşturuldu <a href="/" style="text-decoration: none;color: darkblue">Giriş yapmak için tıklayınız</a></p>
+                </div>
+                <h1 class="title mb-5">Kayıt Ol</h1>
+                <input placeholder='Ad Soyad*' type="text" id="fullName" class="input  mb-2">
+                <input placeholder='Kullanıcı adı*' type="text" id="userName" class="input  mb-2">
+                <input placeholder='Email*' type="email" id="email" class="input  mb-2">
+                <input placeholder='Telefon Numarası' type="text" id="phoneNumber" class="input  mb-2">
+                <input placeholder='Şifre*' type="password" id="password" class="input mb-2">
+                <input placeholder='Şifre Doğrulama*' type="password" id="passwordRepeat" class="input mb-2">
+                <p  style="color: #424242;text-align: start">* Zorunlu alanlar</p>
+                <button class="submitBtn mb-2" type="submit" onclick="checkForm()">Kayıt Ol</button>
+                <p class="forgetPassword"><a href="/">Zaten bir hesaba sahip misin?</a></p>
+            </div>
+
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="waves">
+          <path fill="#7087C0"  fill-opacity="1" d="M0,64L40,58.7C80,53,160,43,240,69.3C320,96,400,160,480,176C560,192,640,160,720,128C800,96,880,64,960,69.3C1040,75,1120,117,1200,138.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <script src={% static 'sideapp/js/register.js' %} ></script>
+</body>
+</html>

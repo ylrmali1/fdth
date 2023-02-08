@@ -21,8 +21,8 @@ input.onchange = evt =>{
       for (let i = 0; i <file.length; i++){
          const imgbox = `
          <div  class="col-md-6">
-            <img id="img" class="show" src=${URL.createObjectURL(file[i])} alt="">
-            <p id="imgName" class="show">${file[i].name}</p>
+            <img id="img" class="show content-center" src=${URL.createObjectURL(file[i])} alt="">
+            <p id="imgName" class="show content-center">${file[i].name}</p>
          </div>`
          row.innerHTML += imgbox;
       }

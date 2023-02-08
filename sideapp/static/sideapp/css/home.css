@@ -1,0 +1,116 @@
+.container{
+    padding: 40px;
+}
+
+.title{
+    text-transform: uppercase;
+    font-family: 'Antonio', sans-serif;
+    font-size: 50px;
+    color: #5D99BE;
+}
+
+.text{
+    font-size: 25px;
+    font-family: 'Antonio', sans-serif;
+    color: #70747a;
+    margin: 10px;
+}
+
+.text a{
+    color: #3592c9;
+    text-decoration: none;
+}
+
+.img{
+    position: absolute;
+    width: 30%;
+    z-index: -1;
+}
+
+.img-1{
+    right: 50px;
+    top: 20%;
+}
+
+.img-2{
+    left: 5%;
+    top: 100%;
+}
+
+.img-3{
+    right: 5%;
+    top: 165%;
+}
+
+.img-4{
+    left: 5%;
+    top: 240%;
+}
+
+.img-5{
+    right: 5%;
+    top: 320%;
+}
+
+.mt-50{
+    margin-top: 100px;
+}
+
+.abslt{
+    position: absolute;
+    right: 50px ;
+}
+
+.c2{
+    color: #B35A98;
+}
+
+.c-3{
+    color: #C53F3F;
+}
+
+.c-4{
+    color: #FF725E;
+}
+
+.c-5{
+    color: #FFB997;
+}
+
+.s-3{
+    position: absolute;
+    top: 160%;
+}
+
+.s-4{
+    position: absolute;
+    top: 230%;
+    right: 5%;
+}
+
+.s-5{
+    position: absolute;
+    top: 300%;
+    left: 5%;
+    margin-bottom: 100px;
+}
+
+span{
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1245px){
+    .img{
+        display: none;
+    }
+
+    .abslt{
+        position: unset;
+    }
+
+    section{
+        position: unset!important;
+    }
+}
+
+

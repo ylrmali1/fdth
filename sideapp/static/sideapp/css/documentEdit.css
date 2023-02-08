@@ -1,0 +1,68 @@
+
+
+
+.card{
+    border: 2px solid darkgrey;
+    border-radius: 30px;
+    height: 100%!important;
+    box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.41);
+    padding: 50px;
+}
+
+
+label{
+    font-family: 'Antonio', sans-serif;
+    color: #1d699a;
+}
+
+
+
+input[type='text']{
+    border: 1px dashed grey!important;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.loadBtn{
+    border-radius: 30px;
+    height: 40px;
+    width: 100%;
+    background-color: #AFC6D9;
+    border: 2px solid #73B2D6;
+    color: rgb(77, 77, 77);
+    cursor:pointer;
+}
+
+.loadBtn:hover{
+    background-color: whitesmoke;
+    color: #73B2D6;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+#uploadSection{
+    background-color: rgba(175, 198, 217, 0.41);
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.45);
+
+}
+
+#uploadSection label{
+    padding:50px;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 1000px){
+    .col-md-4{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .col-md-4{
+        width: 90%;
+    }
+}
+

@@ -3,7 +3,10 @@ from .import views
 
 urlpatterns = [
     path('',views.login,name='login'),
-    path('home',views.index,name='index'),
+    path('register',views.register,name='register.html'),
+    path('user',views.user,name='user'),
+    path('home',views.home,name='home.html'),
+    path('documents/upload',views.index,name='documentUploads'),
     path('documents',views.documents,name='documents'),
     path('documents/add',views.addDoc,name='addDoc'),
     path('documentDetails',views.docDetails,name='docDetails'),

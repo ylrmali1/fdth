@@ -9,85 +9,38 @@
     <link rel="stylesheet" href={% static 'sideapp/css/main.css' %}>
     <link rel="stylesheet" href={% static 'sideapp/css/index.css' %}>
     <link rel="stylesheet" href={% static 'sideapp/css/ocr.css' %}>
+    <link rel="stylesheet" href={% static 'sideapp/css/navbar.css' %}>
     <title>Title</title>
 </head>
 <body>
-    <div class="container h-100">
-        <div class="row">
-            <!-- user / setting / homepage -->
-            <div class="col-md-2  border-right  hidden dontShow" id="sidebar">
-                <div class="card p-5" id="sideColumn">
-                    <div class="d-flex content-end p-1" >
-                        <i class="w-100 fa-solid fa-bars" id="hidden"></i>
-                    </div>
-                    <div class="user mt-5  content-center ">
-                        <i class="fa-regular fa-user"></i>
-                        <h3>Muhammet Ali Yaşar</h3>
-                        <h4>ma.yasar@eksi16.com</h4>
-                    </div>
-                    <div class="d-flex align-items-center  mt-5 ">
-                        <i class="w-100  fa-solid fa-house p-2"></i>
-                        <h3 class="m-0">
-                            <a href="/home">Anasayfa</a>
-                        </h3>
-                    </div>
-                    <div class="d-flex align-items-center mt-1 ">
-                        <i class="fa-solid fa-gear p-2"></i>
-                        <h3 class="m-0">
-                            <a href="">Ayarlar</a>
-                        </h3>
-                    </div>
-                    <div class="d-flex align-items-center mt-1 ">
-                        <i class="fa-solid fa-file p-2"></i>
-                        <h3 class="m-0">
-                            <a href="/documents">Belge Tanımlama</a>
-                        </h3>
-                    </div>
-                </div>
 
-            </div>
-            <!-- belge yükleme -->
-            <div class="col-md-10  " id="mainbar">
-                <div class="card">
-                    <div class="row border-bottom">
-                        <div class="show">
-                            <i class="w-100 fa-solid fa-bars p-5" id="show"></i>
+    {% include 'sideapp/partials/_navbar.html' %}
+
+    <div class="container mt-5 mb-5">
+        <div class="containerOCR">
+            <h1 class="content-center title" >Belge OCR Tanımı</h1>
+            <div class="o-card ">
+                <div class="rowOCR fd-column gap-1">
+                    <div class="col-fit-content">
+                        <div class="i-card d-flex">
+                            <img  id="screenshot" draggable="false" width="600" height="450" class="p-5">
+                            <svg width="750" height="750" viewBox="0 0 750 750" id="draw" xmlns="http://www.w3.org/2000/svg">
+                                <rect id="marquee" x="450" y="420" width="150" height="150" />
+                                <g id="boxes"></g>
+                            </svg>
                         </div>
-                        <a href="/home">
-                            <i class="w-100 fa-solid fa-house  p-5"></i>
-                        </a>
                     </div>
-                    <!-- documents section -->
-
-                    <div class="containerOCR">
-                        <h1 class="content-center" >Belge OCR Tanımı</h1>
-                        <div class="o-card ">
-                            <div class="rowOCR gap-1">
-                                <div class="col-fit-content">
-                                    <div class="i-card d-flex">
-                                        <img  id="screenshot" draggable="false" width="600" height="450" class="p-5">
-                                        <svg width="750" height="750" viewBox="0 0 750 750" id="draw" xmlns="http://www.w3.org/2000/svg">
-                                            <rect id="marquee" x="450" y="420" width="150" height="150" />
-                                            <g id="boxes"></g>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="i-card p-30" id="innerCard">
-                                        <div class="d-flex content-end gap-2 mb-2">
-                                            <i class="fa-solid fa-plus p-1" id="ocrIcon" onclick="addKey()"></i>
-                                            <i class="fa-solid fa-check p-1" id="ocrIcon" onclick="rotateDetailPage()"></i>
-                                        </div>
-                                        <!--
-                                            key and value elements will be here when add button clicked.
-                                        -->
-
-                                    </div>
-                                </div>
+                    <div class="col-md-5">
+                        <div class="i-card p-30" id="innerCard">
+                            <div class="d-flex content-end gap-2 mb-2">
+                                <i class="fa-solid fa-plus p-1" id="ocrIcon" onclick="addKey()"></i>
+                                <i class="fa-solid fa-check p-1" id="ocrIcon" onclick="saveButton()"></i>
                             </div>
+                            <!--
+                                key and value elements will be here when add button clicked.
+                            -->
+                        </div>
                     </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -98,6 +51,7 @@
     <script src={% static 'sideapp/js/main.js' %}></script>
     <script async src={% static 'sideapp/js/ocrKeys.js' %}></script>
     <script async src={% static 'sideapp/js/ocr.js' %}></script>
+    <script src={% static 'sideapp/js/navbar.js' %}></script>
 
 </body>
 </html>

@@ -1,22 +1,45 @@
 #image{
     width: 100%;
     border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: auto;
+
 }
 
 #tabs{
-    top: 5px;
-    left: 30px;
+    top: 10px;
+    left: 60px;
 }
 
 #tabs button{
     width: 120px;
-    background-color: cornflowerblue;
-    color: white;
-    border: 2px solid darkblue;
+    background-color: #AFC6D9;
+    border: 2px solid #73B2D6;
+    color: rgb(77, 77, 77);
+    padding: 5px;
+    border-radius: 30px;
 }
 
 #tabs button:hover{
     background-color: white;
-    color: cornflowerblue;
-    border-color: cornflowerblue;
+    color: #73B2D6;
+}
+
+.o-card{
+    border: 2px solid rgba(128, 128, 128, 0.6);
+    border-radius: 30px;
+    box-shadow: 3px 3px 20px rgba(128, 128, 128, 0.62);
+    margin: 0 auto;
+    width: 60%;
+}
+
+#innerCard {
+    margin-top: 50px;
+}
+
+.i-card h1{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Antonio', sans-serif;
+    font-weight: normal;
 }

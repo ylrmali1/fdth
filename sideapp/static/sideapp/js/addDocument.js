@@ -21,9 +21,9 @@ const uploadDocument = (event)=>{
          let dc = JSON.parse(localStorage.getItem('documents'));
          let count;
          if(dc===null){
-            count = 1;
+            count = 0;
          }else{
-            count = dc.length+1;
+            count = dc.length;
          }
 
          let photoName = docName.value;

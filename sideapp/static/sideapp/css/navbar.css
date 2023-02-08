@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+nav{
+    justify-content: space-around;
+    background-color: #EEF6FA;
+    box-shadow: 0 10px 20px #afc6d9;
+}
+
+.nav-menu{
+    gap: 60px;
+}
+
+
+.nav-item{
+    list-style: none;
+}
+
+.nav-item a{
+    color: #5D99BE;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Antonio', sans-serif;
+    font-size: 22px;
+}
+
+.nav-item a:hover{
+    transition: 0.7s ease-in-out;
+    color: #10405F;
+}
+
+
+
+.brand{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    color: #5D99BE;
+}
+
+.icons{
+    color: #5D99BE;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.bar{
+    display: none;
+    color: #5D99BE;
+    font-size: 22px;
+    cursor : pointer;
+}
+
+@media screen and (max-width: 1000px){
+    .nav-menu{
+        display: none!important;
+    }
+
+    .icons{
+        display: none!important;
+    }
+
+    .bar{
+        display: block;
+    }
+
+    .nav-menu.active{
+        display: flex!important;
+        flex-direction: column;
+        position: absolute;
+        top: 119px;
+        width: 100%;
+        padding: 20px;
+        padding-top: 0;
+        margin-top: 0;
+        background-color: #EEF6FA;
+        z-index: 1;
+    }
+
+    .icons.active{
+        display: flex!important;
+        position: absolute;
+        top: 50px;
+        left: 46%;
+    }
+}

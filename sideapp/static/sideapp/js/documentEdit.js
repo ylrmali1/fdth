@@ -9,9 +9,11 @@ const field = urlParam.get('field');
 
 
 // get datas according to id
-const data = JSON.parse(localStorage.getItem('documents'))[field-1];
+const data = JSON.parse(localStorage.getItem('documents'))[field];
 const documentName = data.name;
 const documentPhotoName = data.pTitle;
+console.log(data);
+console.log(JSON.parse(localStorage.getItem('documents')));
 
 // printing datas
 inputValue.setAttribute('placeholder',documentName);
@@ -30,16 +32,27 @@ imgInput.onchange = () => {
     reader.readAsDataURL(file);
     reader.addEventListener('load',()=>{
         pUrl = reader.result;
-    })
+    });
 
 }
 //.log(data);
 //console.log(JSON.parse(localStorage.getItem('documents')).length);
+let newValue = inputValue.value;
+console.log(newValue);
+
 
 const editDocument = () =>{
 
     // replace old datas from with new datas
-    const newValue = inputValue.value;
+    let newValue = inputValue.value;
+    if (newValue === ""){
+        newValue = data.name;
+    }
+    console.log('url:',pUrl);
+    console.log(data.url);
+    if(pUrl === undefined){
+        pUrl = data.url;
+    }
     const newPhoto = photoValue.innerText;
 
     let db = JSON.parse(localStorage.getItem('documents'));
@@ -52,13 +65,8 @@ const editDocument = () =>{
 
     let oldData = JSON.parse(localStorage.getItem('documents'));
 
-    // delete old data
-    oldData.splice(field-1,1);
-    // get temporary data before changed.
-    let temp = oldData[field-1];
-    // declare new data and temporary data
-    oldData[field-1] = newData;
-    oldData[field] = temp;
+    //changed data
+    Object.assign(oldData[field],newData);
     console.log(oldData);
     // upload local
     localStorage.setItem('documents',JSON.stringify(oldData));

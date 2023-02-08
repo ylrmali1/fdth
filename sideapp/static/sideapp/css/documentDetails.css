@@ -9,12 +9,15 @@ i{
 
 label{
     width: 100%;
+    font-family: 'Antonio', sans-serif;
+    color: #2074af;
 }
 
 input[type='text']{
     width: 100%;
-    border: 0;
-    border-bottom: 2px solid black;
+    border: 1px dashed grey;
+    height: 40px;
+    border-radius: 30px;
 }
 
 input[type='text']:focus{
@@ -29,4 +32,24 @@ input[type='text']:focus{
     width: 100%;
     max-width: 400px;
     max-height: 400px;
+    margin-top: 20px;
+}
+
+.card{
+    border: 2px solid rgba(128, 128, 128, 0.43);
+    height: 100%!important;
+    border-radius: 30px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.33);
+}
+
+@media screen and (max-width: 1000px) {
+    .col-md-4{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .col-md-4{
+        width: 90%;
+    }
 }

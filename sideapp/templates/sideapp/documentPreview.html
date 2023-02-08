@@ -9,86 +9,34 @@
     <link rel="stylesheet" href={% static 'sideapp/css/main.css' %}>
     <link rel="stylesheet" href={% static 'sideapp/css/index.css' %}>
     <link rel="stylesheet" href={% static 'sideapp/css/preview.css' %}>
-    <link rel="stylesheet" href={% static 'sideapp/css/ocr.css' %}>
+    <link rel="stylesheet" href={% static 'sideapp/css/navbar.css' %}>
     <title>Title</title>
 </head>
 <body>
-    <div class="container h-100">
-        <div class="row">
-            <!-- user / setting / homepage -->
-            <div class="col-md-2  border-right  hidden dontShow" id="sidebar">
-                <div class="card p-5" id="sideColumn">
-                    <div class="d-flex content-end p-1" >
-                        <i class="w-100 fa-solid fa-bars" id="hidden"></i>
-                    </div>
-                    <div class="user mt-5  content-center ">
-                        <i class="fa-regular fa-user"></i>
-                        <h3>Muhammet Ali Yaşar</h3>
-                        <h4>ma.yasar@eksi16.com</h4>
-                    </div>
-                    <div class="d-flex align-items-center  mt-5 ">
-                        <i class="w-100  fa-solid fa-house p-2"></i>
-                        <h3 class="m-0">
-                            <a href="/home">Anasayfa</a>
-                        </h3>
-                    </div>
-                    <div class="d-flex align-items-center mt-1 ">
-                        <i class="fa-solid fa-gear p-2"></i>
-                        <h3 class="m-0">
-                            <a href="">Ayarlar</a>
-                        </h3>
-                    </div>
-                    <div class="d-flex align-items-center mt-1 ">
-                        <i class="fa-solid fa-file p-2"></i>
-                        <h3 class="m-0">
-                            <a href="/documents">Belge Tanımlama</a>
-                        </h3>
+    {% include 'sideapp/partials/_navbar.html' %}
+
+    <div class="container mt-5 p-5">
+        <h1 class="content-center title" >Belge Önizleme Ekranı</h1>
+        <div class="o-card p-relative mb-5">
+            <div class="d-flex ms-3 p-absolute gap-1" id="tabs">
+                <!--
+                    tabs buttons will be here!
+                -->
+            </div>
+            <div class="row gap-1">
+                <div class="col-md-7">
+                    <div class="i-card p-5 d-flex">
+                        <img  id="image" >
                     </div>
                 </div>
-
-            </div>
-            <!-- belge yükleme -->
-            <div class="col-md-10  " id="mainbar">
-                <div class="card">
-                    <div class="row border-bottom">
-                        <div class="show">
-                            <i class="w-100 fa-solid fa-bars p-5" id="show"></i>
-                        </div>
-                        <a href="/home">
-                            <i class="w-100 fa-solid fa-house  p-5"></i>
-                        </a>
+                <div class="col-md-4 d-flex align-items-center content-center">
+                    <div class="i-card p-30" id="innerCard ">
+                        <h1>information 1</h1>
+                        <h1>information 2</h1>
+                        <h1>information 3</h1>
+                        <h1>information 4</h1>
+                        <h1>information 5</h1>
                     </div>
-                    <!-- documents section -->
-
-                    <div class="containerOCR">
-                        <h1 class="content-center" >Belge Önizleme Ekranı</h1>
-                        <div class="o-card p-relative">
-                            <div class="d-flex ms-3 p-absolute gap-1" id="tabs">
-                                <!--
-                                    tabs buttons will be here!
-                                -->
-                            </div>
-                            <div class="rowOCR gap-1">
-                                <div class="col-md-7">
-                                    <div class="i-card p-5 d-flex">
-                                        <img  id="image" >
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="i-card p-30" id="innerCard">
-                                        <h1>hello</h1>
-                                        <h1>hello</h1>
-                                        <h1>hello</h1>
-                                        <h1>hello</h1>
-                                        <h1>hello</h1>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -98,6 +46,7 @@
     <script src="https://kit.fontawesome.com/5bec9f942b.js" crossorigin="anonymous"></script>
     <script src={% static 'sideapp/js/main.js' %}></script>
     <script async src={% static 'sideapp/js/preview.js' %}></script>
+    <script src={% static 'sideapp/js/navbar.js' %}></script>
 
 </body>
 </html>

@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href={% static 'sideapp/css/navbar.css' %}>
+    <link rel="stylesheet" href={% static 'sideapp/css/main.css' %}>
+    <link rel="stylesheet" href={% static 'sideapp/css/home.css' %}>
+    <title>Document</title>
+</head>
+<body>
+        {% include 'sideapp/partials/_navbar.html' %}
+
+        <div class="container p-5 mt-5">
+            <section class="d-flex fd-column ">
+                <h1 class="title">Belge ekleme işlemi nasıl yapılır?</h1>
+                <p class="text">Öncelikle yüklenecek belgeler belgeyle anlamlı olacak şekilde isimdirilir</p>
+                <p class="text">Ardından <a class="text" href="/documents">Belgeler</a> sayfasına giriş yapılır.</p>
+                <p class="text">Belgeler sayfasında ekle butonuna basılır</p>
+                <p class="text">Sayfada karşımıza çıkan belge adı ve belge fotoğrafı yüklenir</p>
+                <p class="text">Belgeler yüklendikten sonra yükle butonuna basılır</p>
+                <img class="img img-1" src="{% static 'sideapp/img/upload3.png' %}" alt="">
+            </section>
+            <section class="d-flex fd-column mt-50 abslt">
+                <h1 class="title c2">Belge detayları ve fonksiyonları nelerdir? </h1>
+                <p class="text">Belgemizi yükledikten sonra yönlendirildiğimiz sayfada karşımıza bir tablo çıkacaktır</p>
+                <p class="text">Tabloda eklediğimiz belgeye verdiğimiz ismi ve belge detay linkini görürüz</p>
+                <p class="text">Belge linkine tıklanınca karşımıza detaylar sayfası çıkacaktır</p>
+                <p class="text">Detay sayfasında ikinci ikon OCR işlemini ve son ikon düzenleme sayfasını temsil eder</p>
+            </section>
+            <img class="img img-2" src="{% static 'sideapp/img/document.png' %}" alt="">
+
+            <section class="d-flex fd-column mt-50  s-3">
+                <h1 class="title c-3">Belge OCR nasıl kullanılır? </h1>
+                <p class="text">OCR ekranında seçim yapabilmemiz için öncelikle + butonuna tıklamalıyız</p>
+                <p class="text">Açılan key ve value değerlerinden birine tıklamalıyız</p>
+                <p class="text">Artık seçim yapmaya hazırız fotoğrafın üzerine gidip seçim yapabiliriz</p>
+                <p class="text">Key ve value için seçimlerimizi yaptıktan sonra onaylama butonuna tıklayınız</p>
+            </section>
+            <img class="img img-3" src="{% static 'sideapp/img/select.png' %}" alt="">
+
+            <section class="d-flex fd-column mt-50 s-4">
+                <h1 class="title c-4">Belge düzenleme işlemi nasıl yapılır? </h1>
+                <p class="text">Belge düzenleme ekranında karşımıza 2 düzenleme seçeneği çıkıyor</p>
+                <p class="text">İlk kısımda eski belge ismini görüyoruz</p>
+                <p class="text">Belge ismini değiştirmek için yeni bir isim girip düzenle butonuna tıklayınız</p>
+                <p class="text">Eğer fotoğrafı da değiştirmek isterseniz yeni bir fotoğraf ekleyip düzenleye tıklayınız</p>
+            </section>
+            <img class="img img-4" src="{% static 'sideapp/img/edit.png' %}" alt="">
+
+            <section class="d-flex fd-column mt-50  s-5">
+                <h1 class="title c-5">Belge yükleme nasıl yapılır? </h1>
+                <p class="text">Öncelikle <a href="/documents/upload">Belge Yükleme </a>sayfasına girilir</p>
+                <p class="text">Açılan açılan sayfada belge yükleme kısmı karşımıza gelir</p>
+                <p class="text">Belge yüklemek için fotoğrafları sürükleyebilir ya da tıklayıp seçim yapılabilir</p>
+                <p class="text">Belgelerin önizlemesini gördükten sonra yükle butonuna tıklayınız</p>
+                <p class="text">Yönlendirilen önizleme sayfasında bilgilere ulaşılabilir</p>
+                <p class="text">Eğer birden fazla belge yüklediyseniz yukarıdan belgeler arasında geçiş yapibilirsiniz</p>
+            </section>
+            <img class="img img-5" src="{% static 'sideapp/img/upload.png' %}" alt="">
+
+        </div>
+
+
+
+
+
+    <script src={% static 'sideapp/js/navbar.js' %}></script>
+    <script src="https://kit.fontawesome.com/5bec9f942b.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

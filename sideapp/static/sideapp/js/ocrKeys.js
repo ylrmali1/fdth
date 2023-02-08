@@ -1,9 +1,20 @@
 
+let url2 = window.location.search;
+let urlParam2 = new URLSearchParams(url2);
+let field2 = urlParam2.get('field');
 
+let currentData2 = JSON.parse(localStorage.getItem('documents'))[field2];
+let cdName2 = currentData2.name;
+console.log(cdName2);
+
+
+
+let number = -1;
 const addKey = () =>{
 
+        number +=1;
 
-        // add key and value
+         // add key and value
         const div = document.createElement('div');
         const div2 = document.createElement('div');
         const div3 = document.createElement('div');
@@ -16,7 +27,8 @@ const addKey = () =>{
         inpuT.setAttribute('class','inpt');
         inpuT.setAttribute('id','key');
         inpuT.setAttribute('type','text');
-        inpuT.setAttribute('onclick','active()')
+        inpuT.setAttribute('onclick','keyActive(this.getAttribute(\'data-input-count\'))');
+        inpuT.setAttribute('data-input-count',number);
 
         // first label configurations
         lbL.setAttribute('for','key');
@@ -32,7 +44,8 @@ const addKey = () =>{
         inpuT2.setAttribute('class','inpt');
         inpuT2.setAttribute('type','text');
         inpuT2.setAttribute('id','value');
-        inpuT2.setAttribute('onclick','active()');
+        inpuT2.setAttribute('onclick','valueActive(this.getAttribute(\'data-label-count\'))');
+        inpuT2.setAttribute('data-label-count',number);
 
         // second label configurations
         lbL2.setAttribute('for','value');
@@ -62,30 +75,4 @@ const addKey = () =>{
 
 
 
-const rotateDetailPage = () =>{
-        let url = window.location.search;
-        let urlParam = new URLSearchParams(url);
-        let field = urlParam.get('field');
-
-        window.location.href = `/documentDetails?field=${field}`;
-}
-
-
-const keyInput = document.getElementById('key');
-const draw = document.getElementById('draw');
-
-
-const active = () =>{
-        const key = document.getElementById('key');
-        const value = document.getElementById('value');
-        draw.setAttribute('class','active');
-        if(key.classList.contains('active')){
-                key.classList.remove('active');
-                value.classList.add('active');
-        }
-        else{
-                key.classList.add('active');
-        }
-
-}
 
